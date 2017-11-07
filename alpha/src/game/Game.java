@@ -14,7 +14,9 @@ public class Game extends StateBasedGame
     public static final int HEIGTH = WIDTH / 16 * 9;
     public static final boolean FULLSCREEN = true;
  
-    public static final float  SCALE     = (float) 0.85714285714;
+    
+    // scale = 0.85714285714 for 70 px to 60 px (1920x1080)
+    public static final float  SCALE     = (float) 0.8571428714;
     public static final String TITLE = "Space Out";
  
     public Game() 
@@ -35,7 +37,7 @@ public class Game extends StateBasedGame
  
          app.setDisplayMode(WIDTH, HEIGTH, FULLSCREEN);
          
-         //app.setTargetFrameRate(240);
+         //app.setTargetFrameRate(60);
  
          app.start();
     }

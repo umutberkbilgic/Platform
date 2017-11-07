@@ -12,54 +12,30 @@ public class MouseAndKeyBoardPlayerController extends PlayerController {
  
     public void handleInput(Input i, int delta) {
         //handle any input from the keyboard
-        handleKeyboardInput(i,delta);
+        handleKeyboardInput(i, delta);
     }
- 
+    
     private void handleKeyboardInput(Input i, int delta){
         
     	// see which keys are being pressed each frame
-    	boolean inputLeft  = i.isKeyDown(Input.KEY_A) || i.isKeyDown(Input.KEY_LEFT);
-    	boolean inputRight = i.isKeyDown(Input.KEY_D) || i.isKeyDown(Input.KEY_RIGHT);
-    	boolean inputUp    = i.isKeyDown(Input.KEY_W) || i.isKeyDown(Input.KEY_UP);
-    	boolean inputDown  = i.isKeyDown(Input.KEY_S) || i.isKeyDown(Input.KEY_DOWN);
+    	boolean inputLeft  = i.isKeyDown(Input.KEY_A);
+    	boolean inputRight = i.isKeyDown(Input.KEY_D);
+    	boolean inputJump  = i.isKeyPressed(Input.KEY_SPACE);
     	
-    	// input to movement logic
-    	// left <------
-    	if (inputLeft)
-        {
-        	player.moveLeft(delta);
-        	
-        	if (inputDown)
-        		player.moveDown(delta);
-        	
-        	else if (inputUp)
-        		player.moveUp(delta);
-        }
-        
+    	// both pressed = no movement in that direction axis
+    	if (inputRight && inputLeft)
+    		return;
+    	
     	//right ----->
-        else if (inputRight)
-        {
-            player.moveRight(delta);
-            
-            if (inputDown)
-        		player.moveDown(delta);
-        	
-        	else if (inputUp)
-        		player.moveUp(delta);
-        }
+    	else if (inputRight)
+            player.moveRight();
         
-    	// down
-        else if (inputDown)
-     		player.moveDown(delta);
-     	
-    	// up
-     	else if (inputUp)
-     		player.moveUp(delta);
-    	/*
-    	if(i.isKeyDown(Input.KEY_SPACE))
-    	{
-            player.jump();
-        }*/
+    	// left <------
+        else if (inputLeft)
+        	player.moveLeft();
+    	
+        if (inputJump && !player.isMovingVertically())
+        	player.jump();
     }
  
 }
