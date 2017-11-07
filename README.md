@@ -1,4 +1,6 @@
-<h1>Game project for CS319</h1>
+<h1>Game project for CS319 (UNSTABLE)</h1>
+
+This is th unstable branch. Work will be updated here and will be pushed to master branch.
 
 <p>Java implementation of a retro-style platformer game. 
 Play through levels and create your own levels using the "Level Maker". </p>
