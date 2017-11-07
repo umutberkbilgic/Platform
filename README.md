@@ -1,6 +1,6 @@
 ﻿<h1>Game project for CS319 (ALPHA 2)</h1>
 
-This is the unstable branch. Work will be updated here and will be pushed to master branch.
+This is the alpha 2 branch. See initial commit to check out changes from alpha 1 (unstable)
 
 <p>Java implementation of a retro-style platformer game. 
 Play through levels and create your own levels using the "Level Maker". </p>
