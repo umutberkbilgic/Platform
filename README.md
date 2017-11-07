@@ -1,4 +1,4 @@
-﻿<h1>Game project for CS319 (UNSTABLE)</h1>
+﻿<h1>Game project for CS319 (ALPHA 2)</h1>
 
 This is the unstable branch. Work will be updated here and will be pushed to master branch.
 
