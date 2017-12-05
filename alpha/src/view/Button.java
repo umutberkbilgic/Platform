@@ -1,5 +1,6 @@
 package view;
 
+import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 
@@ -51,14 +52,13 @@ public class Button {
 		return true;
 	}
 	
-	public boolean scale(){
-		//TODO
-		return false;
-	}
 	
 	public int currentState(){
 		return currentState;
 	}
 	
+	public void draw(Graphics g){
+		//g.drawImage(background.getScaledCopy()
+	}
 
 }
