@@ -1,5 +1,8 @@
 package view;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
+
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
@@ -50,6 +53,10 @@ public class Button {
 			return false;
 		}
 		return true;
+	}
+	
+	public Image getImage() {
+		return background;
 	}
 	
 	
