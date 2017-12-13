@@ -34,14 +34,14 @@ public class MainMenu extends BasicGameState{
 		background = new Image("data/img/login_screen_4.jpg");
 		title = new Image("data/img/space_out_title.png");
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        screen_width = (int) screenSize.getWidth();
-        screen_height = (int) screenSize.getHeight();
-        // Create button objects
-        playGameButton = new Button((int) (screen_width*(0.28)), (int) (screen_height*0.275), buttonwidth, buttonheight, "data/img/play.png", 0);
-        levelMakerButton = new Button((int) (screen_width*(0.28)), (int) (screen_height*0.400), buttonwidth, buttonheight, "data/img/lever_maker.png", 0);
-        leaderBoardButton = new Button((int) (screen_width*(0.28)), (int) (screen_height*0.525), buttonwidth, buttonheight, "data/img/leader.png", 0);
-        achievementsButton  = new Button((int) (screen_width*(0.28)), (int) (screen_height*0.650), buttonwidth, buttonheight, "data/img/achi.png", 0);
-        settingsButton  = new Button((int) (screen_width*(0.28)), (int) (screen_height*0.775), buttonwidth, buttonheight, "data/img/settings.png", 0);
+        	screen_width = (int) screenSize.getWidth();
+        	screen_height = (int) screenSize.getHeight();
+        	// Create button objects
+        	playGameButton = new Button((int) (screen_width*(0.28)), (int) (screen_height*0.275), buttonwidth, buttonheight, "data/img/play.png", 0);
+        	levelMakerButton = new Button((int) (screen_width*(0.28)), (int) (screen_height*0.400), buttonwidth, buttonheight, "data/img/lever_maker.png", 0);
+        	leaderBoardButton = new Button((int) (screen_width*(0.28)), (int) (screen_height*0.525), buttonwidth, buttonheight, "data/img/leader.png", 0);
+        	achievementsButton  = new Button((int) (screen_width*(0.28)), (int) (screen_height*0.650), buttonwidth, buttonheight, "data/img/achi.png", 0);
+        	settingsButton  = new Button((int) (screen_width*(0.28)), (int) (screen_height*0.775), buttonwidth, buttonheight, "data/img/settings.png", 0);
 	}
 
 	@Override
