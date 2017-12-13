@@ -14,36 +14,27 @@ public class Button {
 	private double y; //y-coordinate of the upper left corner
 	private double width;
 	private double height;
-	private int currentState; // initialize this
 	private Image background;
-	private int transititonState;
+	private int transitionstate;
 	
 	//constructor
-	public Button(double x, double y, double width, double height,  String imagePath, int currentState, int transitionState) throws SlickException{
+	public Button(double x, double y, double width, double height,  String imagePath, int transitionstate) throws SlickException{
 		this.x = x;
 		this.y = y;
+		this.width = width;
+		this.height = height;
+		this.transitionstate = transitionstate;
 		try{
 			background = new Image(imagePath);
 		} catch(SlickException e){
 			
 		}
-		this.currentState = currentState;
-		this.transititonState = transitionState;
 	}
 	
 	//methods
 	public boolean isPositionContained(double x, double y){
-		return (this.x <= x) && (x <= this.x + width) && (this.y <= y) && (y <= this.y + height);
+		return (x >= this.x) && (x <= this.x + width) && (y >= this.y) && (y <= this.y + height);
 	} 
-	
-	public boolean isPressed(){
-		//TODO
-		return true;
-	}
-	
-	public void changeState(){
-		//TODO
-	}
 	
 	public boolean setImage(String imagePath)
 	{
@@ -59,13 +50,20 @@ public class Button {
 		return background;
 	}
 	
-	
-	public int currentState(){
-		return currentState;
+	public double getX() {
+		return x;
 	}
 	
-	public void draw(Graphics g){
-		//g.drawImage(background.getScaledCopy()
+	public double getY() {
+		return y;
 	}
-
+	
+	public double getWidth() {
+		return width;
+	}
+	
+	public double getHeight() {
+		return height;
+	}
+	
 }
