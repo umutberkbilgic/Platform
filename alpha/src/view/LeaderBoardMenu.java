@@ -29,8 +29,8 @@ public class LeaderBoardMenu extends BasicGameState {
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();//to get the height and width of the screen
 		width = (int)screenSize.getWidth();//screen width assigned
 		height = (int) screenSize.getHeight();//screen height assigned
-		localButton = new Button(width*(0.28), height*(0.575),width*(0.16), height*(0.09), "data/img/leaderboard.png", 1,0);//this image will change
-		globalButton = new Button(width*(0.28), height*(0.575),width*(0.16), height*(0.09), "data/img/leaderboard.png", 1,0);//this image will change
+		localButton = new Button(width*(0.28), height*(0.575),width*(0.16), height*(0.09), "data/img/local.png", 1,0);//this image will change
+		globalButton = new Button(width*(0.28), height*(0.575),width*(0.16), height*(0.09), "data/img/global.png", 1,0);//this image will change
 
 	}
 	@Override

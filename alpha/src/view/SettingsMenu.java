@@ -28,9 +28,9 @@ public class SettingsMenu  extends BasicGameState{
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();//to get the height and width of the screen
 		width = (int)screenSize.getWidth();//screen width assigned
 		height = (int) screenSize.getHeight();//screen height assigned
-		changeSkinButton = new Button(width*(0.28), height*(0.575),width*(0.16), height*(0.09), "data/img/leaderboard.png", 1,0);//this image will change
-		changePasswordButton = new Button(width*(0.28), height*(0.575),width*(0.16), height*(0.09), "data/img/leaderboard.png", 1,0);//this image will change
-		changeUsernameButton = new Button(width*(0.28), height*(0.575),width*(0.16), height*(0.09), "data/img/leaderboard.png", 1,0);//this image will change
+		changeSkinButton = new Button(width*(0.28), height*(0.575),width*(0.16), height*(0.09), "data/img/change_skin.png", 1,0);//this image will change
+		changePasswordButton = new Button(width*(0.28), height*(0.575),width*(0.16), height*(0.09), "data/img/change_password.png", 1,0);//this image will change
+		changeUsernameButton = new Button(width*(0.28), height*(0.575),width*(0.16), height*(0.09), "data/img/change_username.png", 1,0);//this image will change
 
 	}
 	@Override
