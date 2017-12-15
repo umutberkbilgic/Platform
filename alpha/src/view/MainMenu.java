@@ -15,12 +15,13 @@ import org.lwjgl.input.Mouse;
 public class MainMenu extends BasicGameState{
 	
 	// Properties, constants
-	private final int buttonwidth = 744;
-	private final int buttonheight = 107;
+	Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+    private int screen_width = (int) screenSize.getWidth();
+    private int screen_height = (int) screenSize.getHeight();
+	private final int buttonwidth = (int)(screen_width / 2.58);
+	private final int buttonheight = (int)(screen_height / 10.09);
 	private Image background;
 	private Image title;
-	private int screen_height;
-	private int screen_width;
 	// Buttons:
 	private Button playGameButton;
 	private Button levelMakerButton;
@@ -33,15 +34,12 @@ public class MainMenu extends BasicGameState{
 	public void init(GameContainer gc, StateBasedGame sbg) throws SlickException {
 		background = new Image("data/img/login_screen_4.jpg");
 		title = new Image("data/img/space_out_title.png");
-		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        	screen_width = (int) screenSize.getWidth();
-        	screen_height = (int) screenSize.getHeight();
-        	// Create button objects
-        	playGameButton = new Button((int) (screen_width*(0.28)), (int) (screen_height*0.275), buttonwidth, buttonheight, "data/img/play.png", 0);
-        	levelMakerButton = new Button((int) (screen_width*(0.28)), (int) (screen_height*0.400), buttonwidth, buttonheight, "data/img/lever_maker.png", 0);
-        	leaderBoardButton = new Button((int) (screen_width*(0.28)), (int) (screen_height*0.525), buttonwidth, buttonheight, "data/img/leader.png", 0);
-        	achievementsButton  = new Button((int) (screen_width*(0.28)), (int) (screen_height*0.650), buttonwidth, buttonheight, "data/img/achi.png", 0);
-        	settingsButton  = new Button((int) (screen_width*(0.28)), (int) (screen_height*0.775), buttonwidth, buttonheight, "data/img/settings.png", 0);
+        // Create button objects
+        playGameButton = new Button((int) (screen_width*(0.28)), (int) (screen_height*0.275), buttonwidth, buttonheight, "data/img/play.png", 0);
+        levelMakerButton = new Button((int) (screen_width*(0.28)), (int) (screen_height*0.400), buttonwidth, buttonheight, "data/img/lever_maker.png", 0);
+        leaderBoardButton = new Button((int) (screen_width*(0.28)), (int) (screen_height*0.525), buttonwidth, buttonheight, "data/img/leader.png", 0);
+        achievementsButton  = new Button((int) (screen_width*(0.28)), (int) (screen_height*0.650), buttonwidth, buttonheight, "data/img/achi.png", 0);
+        settingsButton  = new Button((int) (screen_width*(0.28)), (int) (screen_height*0.775), buttonwidth, buttonheight, "data/img/settings.png", 0);
 	}
 
 	@Override
@@ -52,8 +50,8 @@ public class MainMenu extends BasicGameState{
 		g.drawImage(playGameButton.getImage(), (int)playGameButton.getX(), (int)playGameButton.getY());
 		g.drawImage(levelMakerButton.getImage(), (int)levelMakerButton.getX(), (int)levelMakerButton.getY() );
 		g.drawImage(leaderBoardButton.getImage(), (int) leaderBoardButton.getX(), (int)leaderBoardButton.getY());
-		g.drawImage(achievementsButton.getImage(), (int) (screen_width*(0.28)), (int) (screen_height*0.650));
-		g.drawImage(settingsButton.getImage(), (int) (screen_width*(0.28)), (int) (screen_height*0.775));
+		g.drawImage(achievementsButton.getImage(), (int) achievementsButton.getX(), (int)achievementsButton.getY());
+		g.drawImage(settingsButton.getImage(), (int) settingsButton.getX(), (int)settingsButton.getY());
 	}
 
 	@Override
@@ -62,17 +60,17 @@ public class MainMenu extends BasicGameState{
 		double xpos = Mouse.getX();
 		double ypos = screen_height - Mouse.getY(); // since for graphic elements y0 is at top, for mouse y0 is at bottom
 		// Check for button click and navigate to next state
-		if(input.isMouseButtonDown(0)) {
+		if(input.isMousePressed(0)) {
 			if(playGameButton.isPositionContained(xpos, ypos))
-				sbg.enterState(0); // change this to proper state id
-			else if(levelMakerButton.isPositionContained(xpos, ypos))
-				sbg.enterState(0); // change this to proper state id
+				sbg.enterState(4); // change this to proper state id
+			//else if(levelMakerButton.isPositionContained(xpos, ypos))
+			//	sbg.enterState(0); // change this to proper state id
 			else if(leaderBoardButton.isPositionContained(xpos, ypos))
-				sbg.enterState(0); // change this to proper state id
-			else if(achievementsButton.isPositionContained(xpos, ypos))
-				sbg.enterState(0); // change this to proper state id
+				sbg.enterState(2); 
+			//else if(achievementsButton.isPositionContained(xpos, ypos))
+			//	sbg.enterState(0); // change this to proper state id
 			else if(settingsButton.isPositionContained(xpos, ypos))
-				sbg.enterState(0); // change this to proper state id
+				sbg.enterState(3); 
 			}
 	}
 	
@@ -88,4 +86,3 @@ public class MainMenu extends BasicGameState{
 	}
 
 }
-
