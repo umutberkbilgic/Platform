@@ -39,6 +39,8 @@ public class SpaceOut extends StateBasedGame {
         addState(new SelectLevelMenu());
         addState(new SelectWorldMenu());
         //addState(new Game());
+        addState(new ChangePasswdMenu());
+        addState(new ChangeUsrMenu());
         this.enterState(1);
     }
  
@@ -58,4 +60,5 @@ public class SpaceOut extends StateBasedGame {
     }
 
 }
+
 
