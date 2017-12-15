@@ -8,6 +8,8 @@ import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.state.StateBasedGame;
 
+//import game_controller.Game;
+
 //import game.Game;
 //import game.state.LevelState;
 
@@ -29,13 +31,15 @@ public class SpaceOut extends StateBasedGame {
     public void initStatesList(GameContainer gc) throws SlickException 
     {
         addState(new Login());
-        addState(new SignUp());
+        //addState(new SignUp());
         addState(new MainMenu());
         addState(new SettingsMenu());
         addState(new LeaderBoardMenu());
-        addState(new AchievementMenu());
+        //addState(new AchievementMenu());
         addState(new SelectLevelMenu());
-        this.enterState(0);
+        addState(new SelectWorldMenu());
+        //addState(new Game());
+        this.enterState(1);
     }
  
     public static void main(String[] args) throws SlickException 
@@ -54,3 +58,4 @@ public class SpaceOut extends StateBasedGame {
     }
 
 }
+
