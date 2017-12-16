@@ -1,9 +1,9 @@
-﻿<h1>Game project for CS319 (ALPHA 2)</h1>
+﻿<h1>Game project for CS319 - Master</h1>
 
-This is the alpha 2 branch. See initial commit to check out changes from alpha 1 (unstable)
+<p>Java implementation of a retro-style platformer game. </p>
 
-<p>Java implementation of a retro-style platformer game. 
-Play through levels and create your own levels using the "Level Maker". </p>
+IMPORTANT: The main source code for this project is contained in the "beta"
+folder as other folders are either there for test or other side documents.
 
   Space Out is retro style sci-fi platformer game that anybody can use to "space out" from their 
 boring life. It is implemented using Java. The game contains three distinct worlds each equipped with 
@@ -13,6 +13,8 @@ story-driven, there is a sense of story provided with continuity throughout leve
 The goal of each level is to reach the finish by running through the platforms, destroy enemies and 
 getting powerups as you do so and jumping over obstacles and traps. The character will be controlled 
 by the arrow keys. 
+
+
 
 Participants:
 
