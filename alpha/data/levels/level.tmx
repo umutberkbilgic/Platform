@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.0.3" orientation="orthogonal" renderorder="left-up" width="32" height="18" tilewidth="70" tileheight="70" nextobjectid="1">
- <tileset firstgid="1" source="level.tsx"/>
- <layer name="CollisionLaye" width="32" height="18">
-  <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC82UwQmAMAxFe/bqFIIO4cEBOoU6hksI3VaFFCU0zW+s4Id/aJr2/WLQOZtasIbsWbSDNWTvr3xfgd8Y+JybyqHx+RmJ3ykcKUeOj+a9tJBLJfGlN0j8QC7V5u7s0Wum/w1/Oj2UBqzA1+bhC751HmrxrfMQ5RP+kv+cw5xq8KV5QDJb+am38ZqVPwL81N2Wb8b/FdHx7EzW1mgPd1Dck7U12sMtcQ/gzWM5AAkAAA==
-  </data>
- </layer>
-</map>
